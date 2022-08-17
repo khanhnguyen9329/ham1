@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3> Tính diện tích hình vuông</h3>
+<table>
+    <tr>
+        <td>nhập cạnh a</td>
+        <td> <input type="text" id="demo1"> </td>
+    </tr>
+    <tr>
+        <td>nhập cạnh b</td>
+        <td> <input type="text" id="demo2" oninput="calculate1()"></td>
+    </tr>
+<tr>
+    <td>Diện tích S =</td>
+    <td id="result"></td>
+</tr>
+</table>
+
+<script>
+    function calculate(a,b){
+        let c  = a * b
+        return c
+    }
+
+    function calculate1(){
+        let a1 = document.getElementById("demo1").value;
+        let b1 = document.getElementById("demo2").value;
+        let result = calculate(a1,b1)
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+<!--    // // tính diện tích tam giác (a*h)/2-->
+<!--    // let theErea = 0-->
+<!--    //  function calculate(a,h){-->
+<!--    //        theErea = (a*h)/2-->
+<!--    //      return theErea-->
+<!--    //  }-->
+<!--    //  function result (){-->
+<!--    //     alert("diện tích S ="+ calculate(2,20) )-->
+<!--    //      alert("diện tích S ="+ calculate(5,30) )-->
+<!--    //      alert("diện tích S ="+ calculate(10,50) )-->
+<!--    //  }-->
+<!--    //   result()-->
+<!--  // Tính S hình vuông a*b-->
+
+
+</body>
+</html>
