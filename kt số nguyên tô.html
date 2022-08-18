@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="demo1"></p>
+<script>
+    let result =""
+    function prime(number) {
+        for (let i = 2; i < number; i++) {
+            let check = true
+            for (let j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    check = false
+                    break
+                }
+            }
+            if (check) {
+                result += i+ "là số nguyên tố" +"<br>"
+            } else {
+                result +=i+ "ko phải số nguyên tố " +"<br>"
+            }
+        }
+        return result
+    }
+
+    let number = prompt("nhập số lương số nt")
+    let ketqua = prime(number)
+    document.getElementById("demo1").innerHTML = ketqua
+
+</script>
+
+</body>
+</html>

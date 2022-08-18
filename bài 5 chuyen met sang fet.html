@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<table class="abc">
+    <tr>
+        <td>Number</td>
+        <td><input type="number" id="demo1" oninput="demo()"></td>
+        <td>
+            <select id="demo2" onchange="demo5()">
+                <option>Meter</option>
+                <option>Feet</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td id="demo3"></td>
+        <td id="123"> Feet</td>
+    </tr>
+</table>
+
+<script>
+    function tinhtoan(M, F) {
+        let convert = document.getElementById("demo2").value
+        let result
+        if (convert == "Meter") {
+            result = (3.279 * M)
+        } else {
+            result = (0.305 * F)
+        }
+        return result
+    }
+
+    function demo() {
+     let M1 = document.getElementById("demo1").value
+     let F1 = document.getElementById("demo1").value
+        let result1 = tinhtoan(M1,F1)
+        document.getElementById("demo3").innerHTML = result1
+    }
+function demo5(){
+        let c = document.getElementById("demo2").value
+    if ( c == "Meter"){
+        document.getElementById("123").innerHTML = "Feet"
+    }else {
+        document.getElementById("123").innerHTML = "Meter"
+        }
+    }
+
+
+
+</script>
+<style>
+    .abc {
+        border:10px blueviolet groove;
+        background: greenyellow;
+        color: red;
+        font-size: 40px;
+    }
+    #demo1 {
+        color: blue;
+        border:5px red groove;
+
+    }
+</style>
+</body>
+</html>

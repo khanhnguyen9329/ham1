@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập số: <input type="number" id ="demo1" oninput="demo2()"> Độ F <br>
+Độ C :
+ <p id="demo2"></p>
+<script>
+    function ketqua(F){
+        let C = (F - 32)/1.8
+        return C
+    }
+function demo2(){
+        let C1 = document.getElementById("demo1").value;
+        let result = ketqua(C1)
+    document.getElementById("demo2").innerHTML = result
+}
+
+</script>
+
+</body>
+</html>

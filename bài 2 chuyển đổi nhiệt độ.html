@@ -32,20 +32,20 @@
         return result
     }
 
-    function temp2() {
-        let thaydoi = document.getElementById("demo1").value
-          if (thaydoi == "C"){
-              document.getElementById("123").innerHTML = "Fahrenheit:"
-          }else {
-              document.getElementById("123").innerHTML = "Celcuis:"
-          }
-
-    }
     function temp() {
         let F1 = document.getElementById("demo").value
         let C1 = document.getElementById("demo").value
         let result1 = temp1(F1, C1)
         document.getElementById("demo2").innerHTML = result1
+    }
+    function temp2() {
+        let thaydoi = document.getElementById("demo1").value
+        if (thaydoi == "C"){
+            document.getElementById("123").innerHTML = "Fahrenheit:"
+        }else {
+            document.getElementById("123").innerHTML = "Celcuis:"
+        }
+
     }
 </script>
 <style>
